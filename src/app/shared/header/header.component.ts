@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DoctorAuthService} from '../../doctors/doctor-auth/doctor-auth.service';
 import {ActivatedRoute} from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
     selector: 'app-header',
@@ -9,15 +9,10 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-    constructor(private authService: DoctorAuthService, private route: ActivatedRoute) {
+    constructor(private route: ActivatedRoute) {
     }
 
     ngOnInit() {
-    }
-
-    logout() {
-        console.log('in header logout');
-        this.authService.logout();
     }
 
     burgerMenuToggled() {

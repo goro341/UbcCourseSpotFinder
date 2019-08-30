@@ -19,7 +19,8 @@
       "dom"
     ],
     "types": [
-      "node"
+      "node",
+      "jquery"
     ]
   }
 }
