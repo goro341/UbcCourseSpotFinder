@@ -1,0 +1,43 @@
+.main-form {
+	.label {
+		.input {
+			width: 100%;
+			&::placeholder {
+				color: #737373;
+			}
+		}
+	}
+}
+
+.form-box {
+	display: block;
+	width: 25rem;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    margin: 3rem auto;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e1e3df;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px rgba(0,0,0,.1);
+	h3 {
+		margin-bottom: 0.5rem;
+	}
+	.label {
+		margin-bottom: 0.75rem;
+	}
+	.btn {
+		margin: 1rem 0;
+		padding: 6px 18px;
+	}
+	.notice {
+		color: $midgray;
+		a {
+			margin-right: 0.25rem;
+			color: $secondary;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}

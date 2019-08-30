@@ -1,0 +1,38 @@
+extends bootstrap/layout.jade
+block project-info
+	- var pagename = 'سوالات متداول'
+	//- - var page = "usual-page"
+	- var page = 'faq'
+
+
+
+block content
+	.container
+		.single-page
+			h3.title-page سوالات متداول
+			.content-holder
+				.row
+					.faq
+						ul
+							-for(let i = 0; i < 4; i++)
+								li
+									h6.title-slide
+										i.fa.fa-question-circle.fa-ml.fa-mr
+										| نحوه ثبت نام در سایت چگونه است؟
+									p.text-slide وارد قسمت ثبت‌نام از منوی بالای صفحه شوید، نام و نام‌خانوادگی، پست الکترونیک و تلفن همراه خود را وارد کرده و کلمه ورود خود را مشخص کنید.در ادامه و برای نهایی کردن ثبت نام نیز، باید شماره تماس و ایمیل خود را تایید کنید.
+								li
+									h6.title-slide
+										i.fa.fa-question-circle.fa-ml.fa-mr
+										| چگونه شماره تماس من تایید میشود؟
+									p.text-slide شماره موبایل شما از طریق کدی که به شما پیامک می‌شود، تایید می‌گردد و شما باید آن کد را در سیستم وارد نمایید.
+								li
+									h6.title-slide
+										i.fa.fa-question-circle.fa-ml.fa-mr
+										| چگونه پست الکترونیک من تایید می‌شود؟
+									p.text-slide پست الکترونیک شما توسط ایمیلی که برای تایید به صندوق پستی شما ارسال می‌گردد، تایید‌ می‌شود و شما باید بر روی گزینه تایید کلیک نمایید.
+								li
+									h6.title-slide جواب سوالتون رو پیدا نکردید ؟
+									p.text-slide
+										| شما می توانید از بخش 
+										a(href="#") تماس با ما
+										| سوال خودتون رو با ما در میون بگذارید تا کارشناسان ما در کمترین زمان ممکن پاسخگو باشند

@@ -1,0 +1,49 @@
+.badge {
+	display: inline-block;
+	padding: 0.5em;
+	font-size: 0.75em;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	font-weight: normal;
+	white-space: nowrap;
+	vertical-align: middle;
+	border-radius: $base-radius;
+	// Empty badges collapse automatically
+	&:empty {
+		display: none;
+	}
+	&.mr {
+		margin-right: 0.5em;
+	}
+}
+
+// Quick fix for badges in buttons
+.btn .badge {
+	position: relative;
+	top: -1px;
+}
+
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badge-pill {
+	padding-right: 0.6em;
+	padding-left: 0.6em;
+	border-radius: 10rem;
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+.badge-primary {
+	background-color: $primary;
+	color: #fff;
+}
+// @each $color, $value in $theme-colors {
+// 	.badge-#{$color} {
+// 		@include badge-variant($value);
+// 	}
+// }

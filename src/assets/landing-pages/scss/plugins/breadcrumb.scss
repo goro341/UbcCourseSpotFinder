@@ -1,0 +1,42 @@
+.breadcrumb {
+	margin: 1rem 0 1.5rem;
+	text-align: right;
+	font-size: 0.8rem;
+	a {
+		display: inline-block;
+		margin: 0;
+		/* font-size: 12px; */
+		font-weight: 400;
+		color: #979BA7;
+		white-space: nowrap;
+		&:hover {
+			color: $black;
+		}
+		&:last-child {
+			color: $black;
+			&:after {
+				display: none;
+			}
+		}
+		&:after {
+			content: "\f109";
+			margin-bottom: -2px;
+			// content: ">";
+			display: inline-block;
+			font-family: "icons";
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			line-height: 1;
+			text-decoration: inherit;
+			text-rendering: optimizeLegibility;
+			text-transform: none;
+			// -moz-osx-font-smoothing: grayscale;
+			// -webkit-font-smoothing: antialiased;
+			// font-smoothing: antialiased;
+			font-size: 0.75rem;
+			color: $black;
+			margin: 0 0.75em 0 1em;
+		}
+	}
+}

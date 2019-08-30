@@ -1,0 +1,74 @@
+//
+// Icon Font: icons
+//
+
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/icons/icons.woff2") format("woff2"),
+       url("../fonts/icons/icons.woff") format("woff"),
+       url("../fonts/icons/icons.ttf") format("truetype"),
+       url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-chevron-left:before,
+.icon-email:before,
+.icon-heart:before,
+.icon-instagram:before,
+.icon-location:before,
+.icon-mobile:before,
+.icon-phone:before,
+.icon-search:before,
+.icon-star:before,
+.icon-telegram:before,
+.icon-twitter:before {
+  display: inline-block;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-chevron-left:before { content: "\f157"; }
+.icon-email:before { content: "\f158"; }
+.icon-heart:before { content: "\f102"; }
+.icon-instagram:before { content: "\f159"; }
+.icon-location:before { content: "\f10b"; }
+.icon-mobile:before { content: "\f10f"; }
+.icon-phone:before { content: "\f15a"; }
+.icon-search:before { content: "\f100"; }
+.icon-star:before { content: "\f15b"; }
+.icon-telegram:before { content: "\f15c"; }
+.icon-twitter:before { content: "\f15d"; }
+
+$font-icons-chevron-left: "\f157";
+$font-icons-email: "\f158";
+$font-icons-heart: "\f102";
+$font-icons-instagram: "\f159";
+$font-icons-location: "\f10b";
+$font-icons-mobile: "\f10f";
+$font-icons-phone: "\f15a";
+$font-icons-search: "\f100";
+$font-icons-star: "\f15b";
+$font-icons-telegram: "\f15c";
+$font-icons-twitter: "\f15d";

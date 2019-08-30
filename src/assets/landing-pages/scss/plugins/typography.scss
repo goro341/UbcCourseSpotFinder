@@ -1,0 +1,29 @@
+%if-letter-spacing-on{
+	// letter-spacing: -.01em;
+	word-spacing: 1/-24 * 1em;
+}
+
+%font-is-IranSans {
+	font-family: $font-light;
+	// font-weight: 200;
+	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning
+	// letter-spacing: -.0175em;
+	// word-spacing: -.025em;
+	-moz-osx-font-smoothing: grayscale;
+}
+%letter-spacing{
+	letter-spacing: 1/-64 * 1em;
+	word-spacing: 1/-42 * 1em;
+}
+
+
+%typoHeading {
+	line-height: 1.5; // this fixes huge spaces when a heading wraps onto two lines
+	margin-top: 1/12 * 0;
+	@extend %if-letter-spacing-on;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@extend %typoHeading;
+}
+

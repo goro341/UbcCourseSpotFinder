@@ -1,0 +1,51 @@
+.faq {
+	.title-slide {
+		font-size: 1rem;
+		margin: 0.25rem 0;
+		color: $midgray;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+	}
+	li {
+		padding: 0.5rem 1rem;
+		border-bottom: 1px solid rgba($black, 0.1);
+		// background-color: rgb(241, 241, 241);
+		// border-radius: 4px;
+		transition: 0.3s;
+		&:hover,
+		&.active {
+			// background-color: darken(#eee, 5);
+			// border-bottom: 1px solid #ff9a33;
+		}
+		// &:last-child {
+		// 	border-bottom: 0;
+		// 	h6 {
+		// 		color: #ff9a33;
+		// 	}
+		// 	a {
+		// 		color: #ff9a33;
+		// 		margin: 0 0.3rem;
+		// 	}
+		// }
+		p {
+			margin: 0.5rem 0;
+			font-size: 0.85rem;
+			color: #333;
+		}
+	}
+	.title-slide {
+		cursor: pointer;
+	}
+	.text-slide {
+		display: none;
+		a {
+			color: $lightpink;
+			margin: 0 0.2rem;
+			&:hover {
+				color: $midpink;
+			}
+		}
+	}
+}

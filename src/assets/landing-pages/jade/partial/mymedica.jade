@@ -1,0 +1,56 @@
+mixin mymedica(item)
+	a.mymedica-comp(href='doctor.html?100000130')
+		.picture.color-2(style=`background-image: url(${item.image})`)
+			span ه
+		.info
+			.title= item.title
+			.second
+				.city= item.city
+				.badge(class=item.color) دندان‌پزشک
+			.subtitle فلوشیپ استروتاکسی و فانکشنال مغز و اعصاب، فلوشیپ اختلالات حرک، فلوشیپ اکو، سی تی و هسته ای قلب
+			//- span.bold 
+			.detail
+				ul
+					li
+						img(src='./dist/images/svg/family-room.svg')
+						.number ۶۷۶
+						.after مشاهده شده
+					li
+						img(src='./dist/images/svg/reserved.svg')
+						.number ۱,۰۰۰
+						.after رزرو شده
+
+	//- .mymedica-comp
+	//- 	.picture
+	//- 		img(src=item.image)
+	//- 		//- -if(item.percent)
+	//- 			.off-label= item.percent
+	//- 		//- .like
+	//- 			i.icon-heart
+	//- 	.info
+	//- 		.title= item.title
+	//- 		//- .label
+	//- 			//- .badge(class=item.color)= item.cat
+	//- 			.stars
+	//- 				i.icon-star
+	//- 				i.icon-star
+	//- 				i.icon-star
+	//- 				i.icon-star
+	//- 				i.icon-star
+
+	//- 		.second
+	//- 			.city= item.city
+	//- 			.badge(class=item.color) دندان‌پزشک
+
+	//- 		.subtitle
+
+	//- 		.detail
+	//- 			ul
+	//- 				li
+	//- 					img(src="./dist/images/svg/family-room.svg")
+	//- 					.number ۲٫۰۰۰
+	//- 					.after مشاهده شده
+	//- 				li
+	//- 					img(src="./dist/images/svg/reserved.svg")
+	//- 					.number ۳٫۰۰۰
+	//- 					.after رزرو شده

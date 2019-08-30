@@ -1,0 +1,32 @@
+extends bootstrap/layout.jade
+block project-info
+	- var pagename = "ورود"
+	//- - var page = "usual-page"
+	- var page = 'login'
+
+
+block content
+	section.login
+		form.form-box
+			.main-form
+				h3 ورود
+				label.label
+					input.input(type='text', required='required' , placeholder='تلفن‌همراه (شناسه کاربری)')
+				label.label
+					input.input(type='password', required='required' , placeholder='رمز عبور')
+				
+				.control
+					input#reminder.control__input.blue(type='checkbox', name='reminder')
+					label.control__label(for='reminder') مرا به خاطر بسپار
+
+				label.label
+					button.green-btn.btn ورود
+
+				label.label
+					.notice
+						| آیا رمز عبور خودرا فراموش کردید؟
+						a(href="#") بازیابی رمز عبور
+				label.label
+					.notice
+						| قبلا در مای‌مدیکا ثبت‌نام نکرده‌اید؟
+						a(href="register.html") ثبت‌نام در مای‌مدیکا

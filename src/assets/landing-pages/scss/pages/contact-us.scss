@@ -1,0 +1,93 @@
+.contact-us {
+	.gmap {
+		margin-top: -2rem;
+	}
+	// .gmnoprint div {
+	// background: none !important;
+	// }
+	.main-form {
+		margin-top: 1rem;
+		.label {
+			margin-bottom: 0.5rem;
+		}
+	}
+	.contact-info {
+		margin-bottom: 0.5rem;
+	}
+	.information {
+		display: inline-block;
+		margin-right: 0.5rem;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		margin-top: 1rem;
+		li {
+			font-size: 0.875rem;
+			margin-bottom: 0.75rem;
+			word-spacing: -0.1em;
+			i {
+				color: #000;
+				float: right;
+			}
+			.span {
+				overflow: hidden;
+			}
+		}
+	}
+	.center-box {
+		width: 40rem;
+		margin: 0 auto;
+	}
+}
+
+
+.single-page {
+	display: block;
+	margin: 2rem 0;
+	.title-page {
+		margin: 0;
+		// border-radius: 4px 4px 0 0;
+		padding: 1.5rem 0 0;
+		// margin-top: 4rem;
+		// color: #ff9a33;
+		color: $primary;
+		// background-color: $lightpink;
+	}
+	p {
+		font-size: 0.9rem;
+		font-weight: 300;
+	}
+	// margin-top: 2rem;
+}
+
+.content-holder {
+	padding: 1rem 0;
+	// border: 1px solid #DEDEDE;
+	// border-radius: 4px;
+	background-color: #fff;
+	// box-shadow: 0 1px 4px rgba(117,117,117,.15);
+}
+
+.gmap {
+	position: relative;
+	width: 100%;
+	margin: 0 0 1rem;
+	padding: 0;
+	height: 25rem;
+	background-color: #eaedf1;
+	overflow: hidden;
+	z-index: 0;
+}
+a[href^="http://maps.google.com/maps"] {
+	display: none !important;
+}
+a[href^="https://maps.google.com/maps"] {
+	display: none !important;
+}
+
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+	display: none;
+}

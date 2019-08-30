@@ -1,0 +1,9 @@
+<div class="option">
+  <div [ngClass]="getNiceSelectCssClass()" tabindex="0" [id]="niceSelectName">
+    <span class="current" #spanElement>{{currentSelected}} </span>
+    <ul class="list" #uListElement>
+      <li class="option selected disabled focus">{{label}}</li>
+      <li class="option" *ngFor="let item of dropdownList" (click)="onValueChange(item)">{{item}}</li>
+    </ul>
+  </div>
+</div>

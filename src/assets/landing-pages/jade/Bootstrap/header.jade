@@ -1,0 +1,35 @@
+header.main-header.static.is-header
+	.container-fluid
+		.header--layout.row.middle-md
+			.col-xs-5.col-sm-5
+				nav.header--menu.links
+					a(class=(page === 'main') ? "current" : "" href="./") خانه
+					a(class=(page === 'search') ? "current" : "" href="search.html") دایرکتوری پزشکان
+					//- a(href="founders.html") پزشکان
+					//- a(href="profile.html") پرستار
+					a.show-xs(href="register.html") به ما بپیوندید
+					//- a(href="about.html") همکاری با ما
+					a.show-xs(href="about-us.html") درباره
+					a.show-xs(href="contact-us.html") تماس
+					a.show-xs(href="register.html") ورود و عضویت
+
+				.burger-container.inline
+					#burger
+						.bar.topBar
+						.bar.btmBar
+
+				.filters.show-xs
+					-if(page === 'search')
+						span.btn-auth#js-show-filters فیلترها
+
+			.col-xs-2.col-sm-2.align-center
+				a.logo(href="./")
+					img(src="dist/images/symbol.svg")
+					//- span.company--name مای‌مدیکا
+
+			.col-xs-2.col-sm-5.align-left.hide-xs
+				nav.links
+					a.btn-auth(class=(page === 'register' || page === 'login') ? "current" : "" href="register.html") به ما بپیوندید
+					//- a(href="about.html") همکاری با ما
+					a(class=(page === 'about') ? "current" : "" href="about-us.html") درباره
+					a(class=(page === 'contact') ? "current" : "" href="contact-us.html") تماس

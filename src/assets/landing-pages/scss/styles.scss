@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+//
+// Modules & Styleguide
+// =====================
+//
+@import 'plugins/functions';
+@import 'plugins/variables';
+@import 'plugins/mixins';
+@import 'plugins/modules';
+@import 'plugins/fonts';
+@import 'plugins/typography';
+@import 'plugins/grid';
+@import 'plugins/form';
+@import 'plugins/timetable';
+@import 'plugins/slick';
+// @import 'plugins/range';
+// @import 'plugins/breadcrumb';
+// @import 'plugins/tabs';
+@import 'plugins/badge';
+@import 'plugins/modal';
+// @import 'plugins/calendar';
+@import 'plugins/alert';
+@import 'plugins/selectbox';
+
+
+//
+// Stylesheet
+// ==========
+//
+@import 'particle/header';
+@import 'particle/footer';
+@import 'particle/mymedica-comp';
+@import 'particle/addons';
+@import 'pages/index';
+@import 'pages/mymedica-page.scss';
+@import 'pages/login-register';
+@import 'pages/contact-us';
+@import 'pages/faq';
+@import 'pages/search'; 
+@import 'pages/reserve'; 
+
+
+
+/**
+ * Assests
+ */
+@import "../../dist/fonts/icons/_icons.scss";

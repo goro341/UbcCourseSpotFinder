@@ -1,0 +1,56 @@
+extends bootstrap/layout.jade
+block project-info
+	- var pagename = "نتیجه ناموفق پرداخت"
+	//- - var page = "usual-page"
+	- var page = 'danger'
+
+block content
+	section.page.checkout--page
+		.container
+			.row
+				section.col-xs-12
+					.checkout__box.error
+						.main
+							h1
+								//- svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 52 52')
+									circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+									path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+								| خرید ناموفق
+							h2 وقت مورد نظرتان ثبت نشد.
+
+						.modal--body
+							.list-group
+								.list-group-item
+									.key نام رزرو کننده
+									.value
+										span هاشم بیگ نژاد
+
+								.list-group-item.white
+									.key نام پزشک
+									.value
+										span دکتر حسین مرادآبادی
+										img(class="icon" src="https://s.cdpn.io/profiles/user/56759/80.jpg?1551171487", alt="")
+
+								.list-group-item.green
+									.key زمان وقت
+									.value
+										span.bold ۱۳:۳۰ - ۱۳۹۷/۰۳/۲۰
+
+								.list-group-item
+									.key قیمت
+									.value
+										.query
+											span.query_amount
+												span IRR
+												|  30,094,234
+											span.query_title هزینه رزرو «۱ نفر»
+										.query
+											span.query_amount
+												span IRR
+												|  40,294,234
+											span.query_title مالیات
+										.query
+											span.query_amount 
+												span IRR
+												|  40,294,234
+											span.query_title مبلغ قابل پرداخت

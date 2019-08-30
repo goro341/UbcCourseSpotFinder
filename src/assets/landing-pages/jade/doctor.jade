@@ -1,0 +1,442 @@
+extends bootstrap/layout.jade
+include partial/mymedica.jade
+
+block project-info
+	- var pagename = "صفحه دکتر"
+	//- - var page = "usual-page"
+	- var page = 'doctor'
+
+block content
+	section.mymedica-page.booking-page.pt-2
+		section.content
+			a(class="book__now active scrollToTop" href="#visitTime") گرفتن وقت دکتر
+
+			.container
+				.row.wrapper-x
+					.col-xs-12.col-md-8.col-lg-8.col--content
+						.section
+							.mymedica-comp.hero(href='doctor.html?100000130')
+								.picture.color-2(style='background-image: url(./dist/images/tmp/image-2.jpg);')
+									span ه
+								.info
+									.title هانیه شکری
+									.second
+										.city مازندران · رامسر
+										.badge.red دندان‌پزشک
+									.subtitle
+										| فلوشیپ استروتاکسی و فانکشنال مغز و اعصاب، فلوشیپ اختلالات حرک، فلوشیپ اکو، سی تی و هسته ای قلب
+									.detail
+										ul
+											li
+												img(src='./dist/images/svg/family-room.svg')
+												.number ۶۷۶
+												.after مشاهده شده
+											li
+												img(src='./dist/images/svg/reserved.svg')
+												.number ۱,۰۰۰
+												.after رزرو شده
+
+						.section#tab-2
+							h3.section-title
+								a(href="#tab-2") درباره
+							//- h5.section-subtitle خدمات
+							ul.ul--list
+								li مدیر گروه گوش، گلو، بینی و جراحی سر و گردن دانشگاه علوم پزشکی یزد
+								li عضو شورای پژوهشی دانشگاه علوم پزشکی یزد
+								li آموزش دوره تکمیلی جراحی آندوسکوپی بینی و سینوس و قاعده جمجمه در دانشگاههای pittsburgh و stanford آمریکا
+								li رئیس بخش جراحی بیمارستان شهید رهنمون یزد
+
+							h3.section-title
+								a(href="#tab-2") تخصص
+							//- h5.section-subtitle خدمات
+							ul.ul--list
+								li.wide
+									b عمومی ،زیبایی ،ارتودنسی ،اینویزیلاین
+									br
+									| فلوشیپ استروتاکسی و فانکشنال مغز و اعصاب، فلوشیپ اختلالات حرک، فلوشیپ اکو، سی تی و هسته ای قلب
+						.section#tab-3
+							h3.section-title
+								a(href="#tab-3") ویژگی‌ها
+
+							.row
+								.col-xs-12.col-sm-6.col-md-6
+									.border-line
+										.border-line_title روزهای کاری مرکز
+										.border-line_sub شنبه تا چهارشنبه
+
+								.col-xs-12.col-sm-6.col-md-6
+									.border-line
+										.border-line_title شیفت های کاری
+										.border-line_sub عصر از ۱۶ تا ۲۴
+
+								//- .col-md-4.col-sm-12
+									.border-line
+										.border-line_title ۲۴:۰۰
+										.border-line_sub ساعت خروج
+
+						.section#tab-4
+							h3.section-title
+								a(href="#tab-4") بیمه‌های طرف قرارداد
+									span.badge.badge-primary.mr ۲ قرارداد
+							ul.ul--list
+								li
+									span.positive
+										| بیمه تامین اجتماعی
+								li
+									span.positive
+										| بیمه سینا
+						.section
+							h3.section-title موقعیت در نقشه
+							p
+								b آدرس مطب دکتر هانیه شکری
+								br
+								| تهران - خیابان شریعتی، نرسیده به ظفر، جنب پمپ بنزین، کوچه شواری، ساختمان پزشکان سینا
+								br
+								br
+								b شماره تلفن
+								br
+								a(href="tel:+982122843289") 02122843289
+							.gmap#map(data-latLang="35.752273,51.446999")
+
+						.section
+							h3.section-title پزشکان مرتبط
+							.row
+								#related__slider
+									-for(i = 0; i < 6 ; i++)
+										.mb-1
+											+mymedica({ image: "./dist/images/tmp/image-2.jpg", percent: "۵۰٪", cat: "هتل آپارتمان", color: "red", title: "هانیه شکری", city: "مازندران · رامسر", price: "۲۴.۰۰۰" })
+
+					.col-xs-12.col-md-4.col-lg-4.col--sidebar.padding-right#visitTime
+						#js_sticky_column
+							.fixed-box.bookCard
+								form.form
+									h4 دریافت نوبت آنلاین
+									.label کلینیک
+									.clear
+										select.w.mb-1#clinic_id(type="input" autocomplete="off" name="name" placeholder="تعداد ...")
+											option(selected hidden disabled) کلینیک
+											option(value="1000010") این سینا
+											option(value="1000011") سعدی
+
+									.doctor-times.always-expanded.fill-width
+										.doctor-times_slider
+											-for(let i = 0; i < 2; i++)
+												.item
+													.date-nav
+														ul
+															li.bold
+																span امروز
+																span #{i+19} اردی
+															li
+																span فردا
+																span #{i+20} اردی
+															li
+																span شنبه
+																span #{i+21} اردی
+															li
+																span یک‌شنبه
+																span #{i+22} اردی
+															li
+																span دوشنبه
+																span #{i+23} خردا
+														//- nav
+															button.prev.small()
+																i.icon-chevron-left
+													.content-clipper
+														.content
+															.timeslots#js_timeslots
+																ul
+																	li
+																		button.js_click_time
+																			| ۱۳:۱۵
+																ul
+																	// 
+																ul
+																	// 
+																ul
+																	li
+																		button.js_click_time
+																			| ۰۷:۴۵
+																	li
+																		button.js_click_time
+																			| ۹:۰۰
+																	li
+																		button.js_click_time
+																			| ۱۰:۰۰
+																	li
+																		button.js_click_time
+																			| ۱۰:۱۵
+																	li
+																		button.js_click_time
+																			| ۱۰:۳۰
+																	li
+																		button.js_click_time
+																			| ۱۱:۴۵
+																	li
+																		button.js_click_time
+																			| ۲۲:۳۰
+																	li
+																		button.js_click_time
+																			| ۲۳:۰۰
+																	li
+																		button.js_click_time
+																			| ۰۰:۰۰
+																ul
+																	li
+																		button.js_click_time
+																			| ۰۷:۴۵
+																	li
+																		button.js_click_time
+																			| ۹:۰۰
+																	li
+																		button.js_click_time
+																			| ۱۰:۰۰
+																	li
+																		button.js_click_time
+																			| ۱۰:۱۵
+																	li
+																		button.js_click_time
+																			| ۱۰:۳۰
+																	li
+																		button.js_click_time
+																			| ۱۱:۴۵
+																	li
+																		button.js_click_time
+																			| ۲۲:۳۰
+																	li
+																		button.js_click_time
+																			| ۲۳:۰۰
+																	li
+																		button.js_click_time
+																			| ۰۰:۰۰
+
+
+							.socials
+								.title به اشتراک بگذارید
+								a.social(href="#")
+									.icon-heart2
+									//- .name افزودن به علاقه‌مندی
+								a.social(href="#")
+									i.icon-telegram.social-telegram
+									//- .name تلگرام
+								a.social(href="#")
+									i.icon-instagram.social-instagram
+									//- .name اینستاگرام
+								a.social(href="#")
+									i.icon-twitter.social-twitter
+									//- .name توییتر
+
+block footer
+	script(src="./dist/scripts/libraries/jquery.slick.js")
+	script(src="./dist/scripts/libraries/jquery.alert.js")
+	script(src="./dist/scripts/libraries/jquery.timetable.js")
+	script(src="./dist/scripts/libraries/jquery.modal.js")
+	//- // Featers List Modal
+	section(id="reserve_modal" class="modal")
+		.modal--body
+			main.reserve-page
+				nav.res__wizard
+					span.line.active
+					span.line.inactive
+					span.line.inactive
+					span.line.inactive
+				.__temp#step-1(style="display: block")
+					.res__header
+						h2.title حساب کاربری
+						h4.subtitle برای تایید رزرو وقت دکتر می‌بایست وارد حساب کاربری شوید.
+					.res__body
+						.form-container(action="#")
+							.row
+								.col-xs-12.col-sm-12.col-md-12
+									section.sector.login
+										h4.label-sector ورود
+										section.card-sector
+											.row
+												.col-xs-12.col-sm-6
+													//- form.form-box
+													.main-form
+														label.label
+															input.input(type='text', required='required' , placeholder='تلفن‌همراه (شناسه کاربری)')
+														label.label
+															input.input(type='password', required='required' , placeholder='رمز عبور')
+														
+														.control
+															input#reminder.control__input.blue(type='checkbox', name='reminder')
+															label.control__label(for='reminder') مرا به خاطر بسپار
+
+														.row.mt-4.actions
+															.col-xs-12
+																button.green-btn.btn ورود
+																a.primary-btn.btn(href="") ثبت‌نام
+
+														label.label
+															.notice
+																| آیا رمز عبور خودرا فراموش کردید؟
+																a(href="#") بازیابی رمز عبور
+												.col-xs-12.col-sm-6
+													img(src="./dist/images/login.jpg", alt="")
+													//- label.label
+														.notice
+															| قبلا در مای‌مدیکا ثبت‌نام نکرده‌اید؟
+															a(href="register.html") ثبت‌نام در مای‌مدیکا
+								//- .col-xs-12.col-sm-12.col-md-6
+									section.sector.login
+										h4.label-sector ثبت‌نام
+										section.card-sector
+											.main-form
+												label.label
+													input.input(type='text', required='required' , placeholder= 'تلفن‌همراه (شناسه کاربری)')
+												label.label
+													input.input(type='password', required='required' , placeholder='رمز عبور')
+												label.label
+													input.input(type='text', required='required' , placeholder= 'نام')
+												label.label
+													input.input(type='text', required='required' , placeholder= 'نام خانوادگی')
+												label.label
+													input.input(type='email', required='required' , placeholder= 'پست الکترونیک')
+														
+												label.label
+													.green-btn.btn ثبت نام
+				.__temp#step-2(style="display: block")
+					.res__header
+						h2.title تایید وقت رزرو
+						h4.subtitle وقت مورد نظر خود را تایید کنید
+					.res__body
+						form.form-container(action="#")
+							section.sector
+								//- h4.label-sector
+								section.card-sector
+									//- .row.top-xs
+									.list-group
+										.list-group-item
+											.key نام رزرو کننده
+											.value
+												span هاشم بیگ نژاد
+
+										.list-group-item.white
+											.key نام پزشک
+											.value
+												span دکتر حسین مرادآبادی
+												img(class="icon" src="https://s.cdpn.io/profiles/user/56759/80.jpg?1551171487", alt="")
+
+										.list-group-item.green
+											.key زمان وقت
+											.value
+												span.bold ۱۳:۳۰ - ۱۳۹۷/۰۳/۲۰
+
+										.list-group-item
+											.key قیمت
+											.value
+												.query
+													span.query_amount
+														span IRR
+														|  30,094,234
+													span.query_title هزینه رزرو «۱ نفر»
+												.query
+													span.query_amount
+														span IRR
+														|  40,294,234
+													span.query_title مالیات
+												.query
+													span.query_amount 
+														span IRR
+														|  40,294,234
+													span.query_title مبلغ قابل پرداخت
+									h3.mt-4 قوانین و مقررات
+									p
+										| در نظر داشته باشید، پزشکان عضو سامانه دکتردکتر بنابر صلاح دید خود زمان کاری متفاوتی برای نوبتدهی تعریف نموده و به بیماران خود خدمت رسانی می‌کنند.
+										br
+										| برای حفظ امنیت اطلاعات و جلوگیری از هرگونه خراب کاری استفاده از خدمات دکتردکتر وابسته به ثبت نام و احراز هویت در سیستم است.
+										br
+										| اطلاعات خواسته شده در بخش ثبت نام نظیر کدملی، شماره تلفن و... الزامی است و صرفا برای امنیت اطلاعات بیماران و امکان ارتباط احتمالی در آینده است.
+										br
+										| کاربران می تواند برای خود یا شخص دیگری نوبت رزرو کنند اما اطلاعات فردی که در سیستم به ثبت شده، مورد تائید پزشک برای ویزیت است. لطفا در وارد کردن اطلاعات بیمار دقت داشته باشید.
+										br
+										| هنگام دریافت نوبت از پزشک یا مرکز درمانی به قوانین آن مرکز توجه کنید.
+										br
+										| ممکن است برخی از پزشکان همه یا بخشی از هزینه خود را به صورت اینترنتی دریافت کنند، در صورت عدم پرداخت وجه اینترنتی، نوبت بیمار نهایی نخواهد شد.
+										br
+										| در دکتردکتر تمام تلاش خود را به کار گرفته‌ایم که زمان انتظار بیمار در مطب را به صفر برسانیم اما در نظر داشته باشید نوبت‌هایی که در سیستم ثبت می شود به منزله زمان پذیرش بیمار است و ممکن است زمان پذیرش با زمان ویزیت متفاوت باشد.
+										br
+										| با توجه به سیاست های کاری هر پزشک، امکان لغو نوبت وجود خواهد داشت.
+
+
+							.actions.row.top-xs.arround-xs
+								.col-xs.align-left
+									a.button.prev.disabled(href="#") قبلی
+								.col-xs.align-right
+									a.button.next(href="?step=2") مرحله بعدی
+
+				//- .__temp#step-2
+					//- nav.res__wizard
+						span.line.active
+						span.line.active
+						span.line.inactive
+						span.line.inactive
+
+					.res__header
+						.container 
+							h2.title Insert Passangers Information
+							h4.subtitle Please select your room that you want to show to people looking for property
+					.res__body
+						form.form-container(action="#")
+							section.sector
+								h4.label-sector Room Information
+								section.card-sector
+									-for(let j = 1; j < 4; j++)
+										.mt-2
+											h5.serif
+												| Luxury Suite #
+												= j
+											.row.top-xs
+												-for(let i = 1; i < 5; i++)
+													.col-xs-12.col-sm-6
+														+input(`Passanger #${i}`, `Passanger #${i}`, `Passanger #${i}`, 'text', 'ltr', null, false, 0)
+
+							.actions.row.top-xs.arround-xs
+								.col-xs.align-left
+									a.button.prev(href="?step=1") Back
+								.col-xs.align-right
+									a.button.next(href="?step=3") Next STEP
+				//- .__temp#step-3
+					//- nav.res__wizard
+						span.line.active
+						span.line.active
+						span.line.active
+						span.line.inactive
+
+					.res__header
+						.container 
+							h2.title Enter Reserver Information
+							h4.subtitle Please select your room that you want to show to people looking for property
+					.res__body
+						form.form-container(action="#")
+							section.sector
+								h4.label-sector Reserver Information
+								section.card-sector
+									.row.top-xs
+										.col-xs-12.col-sm-6
+											+input(`Reserver Name`, `Reserver Name`, `Reserver Name`, 'text', 'ltr', null, false, 0)
+										.col-xs-12.col-sm-6
+											+input(`Reserver Mobile Number`, `Reserver Mobile Number`, `Reserver Mobile Number`, 'text', 'ltr', null, false, 0)
+										.col-xs-12.col-sm-6
+											+input(`Reserver Email`, `Reserver Email`, `Reserver Email`, 'text', 'ltr', null, false, 0)
+
+							section.sector.total-price
+								h4.label-sector Total Price:
+									.util-price
+										i.icon(data-feather="dollar-sign")
+										span.important= getPrice()
+										|  USD
+										span.old 7,300,000 USD
+								.control.mt-1
+									input#item_1.control__input.blue(type='checkbox', name='item_1')
+									label.control__label(for='item_1') I agree to have read the 
+										a(href="#") Terms & Conditions
+										|  &  
+										a(href="#") Cancellation Policy.
+							.actions.row.top-xs.arround-xs
+								.col-xs.align-left
+									a.button.prev(href="?step=2") Back
+								.col-xs.align-right
+									a.button.next(href="#") Complete Payment

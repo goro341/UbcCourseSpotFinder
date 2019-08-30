@@ -1,0 +1,37 @@
+
+<header class="main-header static is-header">
+    <div class="container-fluid">
+        <div class="header--layout row middle-md">
+            <div class="col-xs-5 col-sm-5">
+                <nav class="header--menu links" (click)="burgerMenuLinksClicked()">
+                    <a class="current" [routerLink]="['/']">خانه</a>
+                    <a [routerLink]="['/r']">پزشکان </a>
+                    <a [routerLink]="['/patients/auth0']" routerLinkActive="active">بیماران </a>
+                    <a [routerLink]="['/doctors/auth0']" routerLinkActive="active" class="show-xs">به ما بپیوندید</a>
+                    <a href="" routerLinkActive="active" class="show-xs">راهنما</a>
+                </nav>
+                <div class="burger-container inline">
+                    <div id="burger" (click)="burgerMenuToggled()">
+                        <div class="bar topBar"></div>
+                        <div class="bar btmBar"></div>
+                    </div>
+                </div>
+                <div class="filters show-xs" *ngIf="shouldLoadFilters()">
+                    <span id="js-show-filters" (click)="mobileFiltersClicked()" class="btn-auth">فیلترها</span>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 align-center">
+                <a href="./" class="logo">
+                <img src="/assets/landing-pages/dist/images/symbol.svg">
+            </a>
+            </div>
+            <div class="col-xs-2 col-sm-5 align-left hide-xs">
+                <nav class="links">
+                    <a routerLink=""  class="btn-auth">به ما بپیوندید</a>
+                    <a [routerLink]="['/aboutus']" routerLinkActive="active">درباره ما</a>
+                    <a routerLinkActive="active" [routerLink]="['/contactus']">تماس با ما</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

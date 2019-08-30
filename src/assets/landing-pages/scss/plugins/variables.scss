@@ -1,0 +1,120 @@
+//
+//
+// *** Variables ***
+// =================
+//
+// Everything need to know CSS
+// Global variables of all kinds
+//
+$version				: '1.0.0';
+
+
+
+// Road: Grid system
+$width-container		: 65rem;
+$columns				: 12;
+$gutter-width		   	: 0.5rem;
+$breakpoints			: ((small, 20rem), (medium, 48.25rem), (large, 60rem)) !default;
+$desktop				: nth(nth($breakpoints, 3), 2);
+$tablet					: nth(nth($breakpoints, 2), 2);
+$mobile				 	: nth(nth($breakpoints, 1), 2);
+$grid--negative			: true;
+$column-gap				: 1rem;
+
+
+
+// Road: Base
+$base-radius			: 5px;
+$base-min-space		 	: 1rem;
+$base-max-space		 	: 3rem;
+
+
+// Road: Typography
+$font-IranSans		 	: "shabnam";
+$font-light			 	: $font-IranSans, Helvetica, Geneva, Verdana, sans-serif;
+
+$typo-font-weight	   	: normal;
+$typo-line-height		: 1.825;
+$typo-font-base		 	: 16;
+$typo-font-size			: $typo-font-base/ ($typo-font-base * 1) + rem;
+$typo-measure		   	: $typo-font-base * $typo-line-height;
+$typo-typescale-unit	: rem;
+
+
+$typo-scale			 : (
+	type-scale_alpha	: 61.03,
+	type-scale_beta	 	: 48.82,
+	type-scale_gamma	: 39.06,
+	type-scale_delta	: 31.25,
+	type-scale_epsilon  : 25,
+	type-scale_zeta	 	: 20,
+) !default;
+
+$typo-headings		  : (
+	h1				  : type-scale_alpha,
+	h2				  : type-scale_beta,
+	h3				  : type-scale_gamma,
+	h4				  : type-scale_delta,
+	h5				  : type-scale_epsilon,
+	h6				  : type-scale_zeta
+) !default;
+
+
+
+// Road: Base Colors
+$background				: #FFFFFF;
+$blue-gray				: #676C77;
+$beige					: #B89871;
+$cream					: #B8AC9D;
+$green					: #29a980;
+$orange					: #FFBE22;
+$red					: rgb(255, 53, 97);
+
+$white-gray				: #F4F4F4;
+$gray-light				: #EDEAEA;
+$black-opacify			: rgba(black, .065);
+
+
+
+$primary				: #3EA7C8;
+$darkpink				: #AA0B30;
+$midpink				: #E2496D;
+$lightpink				: #EF7692;
+
+$secondary				: #62A158;
+$darkblue				: #024BA3;
+$midblue				: #358FFA;
+$lightblue				: #61A5F7;
+
+
+$black			  		: #0F1317;
+$midgray				: #7D848C;
+$gray					: #DCDFE3;
+$white					: #FFFFFF;
+
+
+$palettes: (
+	black: (
+		base	: $black,
+		normal  : #333333,
+		accent  : #4d4d4d,
+		gray	: #757575,
+		light   : #E0E0E0,
+		X-light : #FAFAFA
+	)
+);
+
+
+$colors			   	: ( bluegray: $blue-gray, green: $green, red: $midpink);
+
+
+/**
+ * Social Colors
+ */
+$social : (
+	facebook		: #3A559F,
+	instagram	    : #e1306c,
+	telegram		: #37AEE2,
+	aparat 			: #ED145B,
+	twitter 		: #1da1f2
+);

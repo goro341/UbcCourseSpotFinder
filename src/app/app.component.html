@@ -1,0 +1,28 @@
+<app-header></app-header>
+<section class="login">
+  <form class="form-box" id="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="main-form">
+      <h3>UBC Available Spot Finder</h3>
+      <label class="label">
+        <input type="text" required="required" placeholder="CPSC 310 201" class="input" ngModel name="courseName">
+      </label>
+      <label class="label">
+        <input type="text" required="required" placeholder="Email" class="input" ngModel name="email">
+      </label>
+      <div class="control">
+        <input id="reminder" type="checkbox" name="reminder" class="control__input blue">
+        <label for="reminder" class="control__label">مرا به خاطر بسپار</label>
+      </div>
+      <label class="label">
+        <button class="green-btn btn">Submit</button>
+      </label>
+      <label class="label">
+        <div class="notice">آیا رمز عبور خود را فراموش کردید؟<a [routerLink]="['../forgotPassword']">بازیابی رمز عبور</a></div>
+      </label>
+      <label class="label">
+        <div class="notice">قبلا در مای‌مدیکا ثبت‌نام نکرده‌اید؟<a [routerLink]="['../register']">ثبت‌نام در مای‌مدیکا</a></div>
+      </label>
+    </div>
+  </form>
+</section>
+<app-footer></app-footer>

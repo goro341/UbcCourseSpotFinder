@@ -1,0 +1,30 @@
+extends bootstrap/layout.jade
+block project-info
+	- var pagename = "ثبت نام"
+	//- - var page = "usual-page"
+	- var page = 'register'
+
+
+
+block content
+	section.login
+		form.form-box
+			.main-form
+				h3 ثبت نام
+				label.label
+					input.input(type='text', required='required' , placeholder= 'تلفن‌همراه (شناسه کاربری)')
+				label.label
+					input.input(type='password', required='required' , placeholder='رمز عبور')
+				label.label
+					input.input(type='text', required='required' , placeholder= 'نام')
+				label.label
+					input.input(type='text', required='required' , placeholder= 'نام خانوادگی')
+				label.label
+					input.input(type='email', required='required' , placeholder= 'پست الکترونیک')
+						
+				label.label
+					.green-btn.btn ثبت نام
+
+				//- label.label
+					.notice
+						| قبلا کد تایید را دریافت کرده‌ام.

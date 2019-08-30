@@ -1,0 +1,49 @@
+block project-info
+- const persian = ['۱','۲','۳','۴','۵','۶','۷','۸','۹','۱۰','۱۱','۱۲','۱۳','۱۴','۱۵','۱۶','۱۷','۱۸','‍۱۹','۲۰','۲۱','۲۲','۲۳','۲۴','۲۵','۲۶','۲۷','۲۸','۲۹','۳۰','۳۱','۳۲','۳۳','۳۴','۳۵','۳۶','۳۷','۳۸','۳۹','۴۰','۴۱','۴۲','۴۳','۴۴','۴۵','۴۶','۴۷','۴۸','۴۹','۵۰','۵۱','۵۲','۵۳','۵۴','۵۵','۵۶','۵۷','۵۸','۵۹','۶۰','۶۱','۶۲','۶۳','۶۴','۶۵','۶۶','۶۷','۶۸','۶۹','۷۰','۷۱','۷۲','۷۳','۷۴','۷۵','۷۶','۷۷','۷۸','۷۹','۸۰','۸۱','۸۲','۸۳','۸۴','۸۵','۸۶','۸۷','۸۸','۸۹','۹۰','۹۱','۹۲','۹۳','۹۴','۹۵','۹۶','۹۷','۹۸','۹۹','۱۰۰','۱۰۱','۱۰۲','۱۰۳']
+- function cacheBusted(url){ return url }
+- function randColor() { return '#'+Math.floor(Math.random()*16777215).toString(16); }
+- const getRandomFloat = (min, max) => Math.random() * (max - min + 1) + min;
+- const getRandomInt = (min, max) =>  Math.floor(getRandomFloat(min, max));
+
+doctype html
+html(lang="fa")
+	head
+		meta(charset='utf-8')
+
+		block title
+			title
+				=pagename
+				
+		meta(name="author" content= "{ Copyright }")
+		meta(name="keywords" content="")
+		meta(name='description' content="")
+
+		meta(name="robots" content="index follow")
+		meta(name="copyright" content="2015-2016")
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name="viewport" content="initial-scale=1.0 user-scalable=no width=device-width")
+
+		meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+
+		link(rel="shortcut icon" type="image/x-icon" href="./dist/img/favicon.png")
+		link(href='dist/styles/styles.css' rel="stylesheet" media="all")
+		script(src="./dist/scripts/libraries/jquery.js")
+
+		block header
+	body
+		//- if(single != true)
+		//- 	include header.jade
+		if(!main)
+			include header.jade
+		//- -else
+			include header.jade
+
+
+		block content
+
+		if(single != true)
+			include footer.jade
+			block footer
+			include scripts.jade
+

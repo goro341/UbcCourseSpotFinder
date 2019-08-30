@@ -1,0 +1,30 @@
+mixin sidebar(item)
+	.sidebar
+		.sidebar-title
+			h4 خوش آمدید
+		ul
+			li(class=(item === 'profile' ? 'active' : ''))
+				a(href="/profile.html")
+					| مشخصات شما
+					.pull-left
+						i.icon-chevron-left
+			li(class=(item === 'profile-order' ? 'active' : ''))
+				a(href="/profile-order.html")
+					| لیست سفارشات
+					.pull-left
+						i.icon-chevron-left
+			li(class=(item === 'wish-list' ? 'active' : ''))
+				a(href="/wish-list.html")
+					| علاقه مندی ها
+					.pull-left
+						i.icon-chevron-left
+			li(class=(item === 'forgot-pass' ? 'active' : ''))
+				a(href="forgot-pass.html")
+					| تغییر کلمه عبور
+					.pull-left
+						i.icon-chevron-left
+			li(class=(item === 'exit' ? 'active' : ''))
+				a(href="#")
+					| خروج
+					.pull-left
+						i.icon-chevron-left

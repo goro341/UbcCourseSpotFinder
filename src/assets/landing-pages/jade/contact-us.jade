@@ -1,0 +1,64 @@
+extends bootstrap/layout.jade
+block project-info
+	- var pagename = "تماس باما"
+	//- - var page = "usual-page"
+	- var page = 'contact'
+
+
+
+block content
+	.contact-us.single-page
+		.gmap#map(data-latLang="35.752273,51.446999")
+		.container
+			.center-box
+				h3.title-page تماس با ما
+				.contact-info
+					i.icon-location
+					span.information تهران، ایران، تهران، ایران، تهران، ایران، تهران، ایران، تهران، ایران، تهران، ایران
+				.contact-info
+					i.icon-phone
+					span.information  ۲۶۷۰۲۳۳۱۱۳ ۲۱ - ۲۶۷۲۲۳۱۷ ۲۱ - ۲۶۷۱۲۱۷۱ ۲۱ - ۲۶۱۲۱۰۷۶۹ ۲۱ -  ۰۹۲۱۲۳۳۳۲
+				.contact-info
+					i.icon-email
+					span.information info@mymedica.com
+
+				form.main-form
+					label.label
+						//- i.icon.icon-envelope.icon-ml
+						input.input(type="text" placeholder="نام خود را وارد کنید")
+					label.label
+						input.input(type="email" placeholder="ایمیل خود را وارد کنید")
+					label.label
+						input.input(type="phone" placeholder="شماره تماس خود را وارد کنید")
+					label.label
+						textarea.textarea.input(type="text" placeholder="متن پیام")
+					label.label
+						button.btn.green-btn ثبت
+
+block footer
+	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALZyQQwoZzKu9tTUoYBxZ-ZaqIIhbgip0&callback=initMap" type="text/javascript")
+	script(type="text/javascript").
+		var map,
+			marker,
+			elmID = 'map',
+			ObjID = document.querySelector('#' + elmID),
+			LatLang = ObjID.dataset.latlang.split(','),
+			Lat = parseFloat(LatLang[0]),
+			Lang = parseFloat(LatLang[1]);
+			var mapOptions = {
+				zoom: 16,
+				center: { lat: Lat, lng: Lang },
+				disableDefaultUI: true,
+				scrollwheel: false,
+				scaleControl: true,
+				zoomControl: true,
+				mapTypeControl: true,
+			};
+		function initMap() {
+			map = new google.maps.Map(ObjID, mapOptions);
+			marker = new google.maps.Marker({
+				position: new google.maps.LatLng(Lat, Lang),
+				map: map,
+				optimized: true,
+			});
+		};

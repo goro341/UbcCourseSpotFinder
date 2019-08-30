@@ -1,0 +1,187 @@
+extends bootstrap/layout.jade
+include partial/mymedica.jade
+
+block project-info
+	- var pagename = "مای‌مدیکا"
+	- var main = true
+	- var page = 'main'
+
+block content
+	include bootstrap/header.jade
+	section.hero-pic
+		.container
+			.row.middle-md
+				.col-xs-12.col-md-6.col-lg-7
+					.layer
+						h1.title-first مای مدیکا
+						h3.title-second نوبت‌دهی آنلاین پزشکان در ایران
+						form.form(action="search.html")
+							.main-input
+								.has-input
+									i.icon.icon-search
+									input.input(type="text" name="full_name" placeholder="جستجو نام مرکز درمانی…")
+								.option
+									//- label.label(for="type") تخصص
+									select.input(id="type" name="level_one_speciality")
+										option(selected hidden disabled) تخصص
+										option(value) همه
+										option(value='1') پزشک
+										option(value='2') دندان‌پزشک
+										option(value='3') روانشناس
+
+								.option
+									//- label.label(for="city") شهر
+									select.input(id="city" name="city")
+										option(selected hidden disabled) شهر
+										option(value) همه
+										option(value="1") تهران
+										option(value="2") اصفهان
+										option(value="3") مشهد
+										option(value="4") تبریز
+										option(value="5") شیراز
+										option(value="6") کرج
+								button.btn.submit جستجو پزشکان
+						ul.features
+							li
+								a(href="#")
+									img.icon(src="./dist/images/svg/fingerprint.svg")
+									.text اعتبارسنجی پزشکان
+							li
+								a(href="#")
+									img.icon(src="./dist/images/svg/24-hours.svg")
+									.text نوبت‌دهی ۲۴ ساعته
+							li
+								a(href="#")
+									img.icon(src="./dist/images/svg/open-book.svg")
+									.text جست‌وجو پزشکان
+							li
+								a(href="#")
+									img.icon(src="./dist/images/svg/notepad.svg")
+									.text پرونده پزشکی آنلاین
+							li
+								a(href="#")
+									img.icon(src="./dist/images/svg/learning.svg")
+									.text دریافت تمام مجوزهای لازم
+				.col-xs-12.col-md-6.col-lg-5
+					i.art-1
+
+	section.description
+		.container
+			.row
+				.col-md-6.col-xs-12
+					i.art-2
+				.col-md-6.col-xs-12.first-xs
+					.main-title
+						.title
+							b چرا
+							|  مای‌مدیکا؟
+					.paragraph لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+					.item.active
+						.text
+							.title  قیمت
+							p با مای‌مدیکا می توانید در هر شهر، آشنایی قابل اعتماد برای وقت پزشک داشته باشید.
+						//- .icon
+							i.icon-arrow-left-long
+					.item
+						.text
+							.title  امنیت
+							p با پیشرفت صنعت پزشکی، پیدا کردن و پزشک مورد اعتماد از کنار جاده و تا اتاق خواب شما
+						//- .icon
+							i.icon-arrow-left-long
+					.item
+						.text
+							.title تجربه استفاده
+							p تیم مای‌مدیکا با قبول مسئولیت به عنوان رابط بین بیمار و پزشک، امنیت، راحتی و صحت اطلاعات پزشک.
+						//- .icon
+							i.icon-arrow-left-long
+
+
+	//- section.application
+		.container
+			.row.row-flex
+				.col-md-6.col-xs-12.artwork
+					.artwork-mobile
+
+				.col-md-6.col-xs-12.content
+					.dl-app
+						.main-title
+							//- .gradient
+							.title
+								b همیشه
+								|  مای‌مدیکا درجیب شماست
+						.txt برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید.
+						form.form
+							label.label
+								.main-input
+									i.icon.icon-mobile
+									input.input(type="text" placeholder=" مثال، ۰۹۱۲۱۲۳۴۵۶۷")
+									.btn.submit دریافت لینک
+						.appstore
+							.txt دانلود از فروشگاه های اپ
+							a(href="#")
+								img(src="./dist/images/svg/Sibapp-Badge-Gray.svg")
+							a(href="#")
+								img(src="./dist/images/svg/cafebazaar.svg")
+							a(href="#")
+								img(src="./dist/images/svg/google-play-badge.svg")
+
+	//- section.fav-city
+		.container
+			.main-title
+				//- .gradient
+				.title
+					b شهر
+					|های محبوب
+				a(href="#").more شهرهای دیگر ...
+			.row
+				-for(i=0 ; i<6 ; i++)
+					.col-md-4.col-xs-12
+						a.item(href="/")
+							.dark-layer
+							.pic
+								img(src="https://source.unsplash.com/random/430x400/?city")
+							.content
+								img(src="./dist/images/svg/notre-dame.svg")
+								.city مازندران · رامسر
+								.number «۲۰۰» مای‌مدیکا
+
+	section.blog
+		.container
+			.main-title
+				.title
+					b بلاگ
+					|  مای‌مدیکا
+				a(href="#").more مطالعه مطالب دیگر  … 
+			.row
+				.col-md-8.col-xs-12
+					a.item(href="#")
+						.blog-label وبلاگ
+						img(src="https://source.unsplash.com/random/1300x450")
+						.content
+							.title پزشک برتر سال ۱۳۹۷ 
+							.text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+							.pic-writer
+								//- img(src="./dist/images/tmp/esfehan.png")
+							.name-writer نوشته شده توسط ناصر عبداللهی ۲ روز پیش
+				.col-md-4.col-xs-12
+					a.item(href="#")
+						.blog-label وبلاگ
+						img(src="https://source.unsplash.com/random/700x495")
+						.content
+							.title پزشک برتر سال ۱۳۹۷ 
+							.text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+							.pic-writer
+								//- img(src="./dist/images/tmp/esfehan.png")
+							.name-writer نوشته شده توسط ناصر عبداللهی ۲ روز پیش
+			.row
+				-for(i = 0; i < 3; i++)
+					.col-md-4.col-xs-12
+						a.item(href="#")
+							.blog-label وبلاگ
+							img(src="https://source.unsplash.com/random/500x350")
+							.content
+								.title پزشک برتر سال ۱۳۹۷ 
+								.text لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+								.pic-writer
+									//- img(src="./dist/images/tmp/esfehan.png")
+								.name-writer نوشته شده توسط ناصر عبداللهی ۲ روز پیش

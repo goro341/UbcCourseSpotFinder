@@ -1,0 +1,222 @@
+.footer {
+	position: relative;
+	margin-top: 3rem;
+	background-color: #212121;
+	z-index: 12;
+	.module-title {
+		margin-bottom: 1rem;
+		font-size: 0.9rem;
+		color: $gray;
+		font-weight: bold;
+	}
+	.first-footer {
+		padding: 2.5rem 0;
+		color: $midgray;
+		// border-top: 1px solid #E3E3E6;
+		border-bottom: 1px solid #2D2F33;
+		.logo {
+			display: block;
+		}
+		a {
+			color: #A8B3BF;
+			&:hover {
+				color: $primary;
+			}
+		}
+		// i {
+		// 	font-size: 1.5rem;
+		// 	margin-left: 1.5rem;
+		// }
+		// p {
+		// 	font-size: 0.85rem;
+		// }
+		ul {
+			margin: 0;
+			li {
+				list-style-type: none;
+				font-size: 0.85rem;
+			}
+		}
+		// @media (max-width: $tablet) {
+		// 	// text-align: center;
+		// 	.pull-left {
+		// 		float: none;
+		// 	}
+		// 	ul {
+		// 		margin-bottom: 1rem;
+		// 	}
+		// 	hr {
+		// 		margin: 0.7rem auto;
+		// 	}
+		// }
+		.contact-box {
+			position: relative;
+			display: flex;
+			width: 100%;
+			background-color: #69B25E;
+			padding: 0.5rem 1.25rem;
+			border-radius: $base-radius;
+			// .line-vertical {
+			// 	position: absolute;
+			// 	top: 50%;
+			// 	left: 50%;
+			// 	transform: translate(-50%, -50%);
+			// 	// display: inline-block;
+			// 	width: 1px;
+			// 	height: 2rem;
+			// 	margin: 0 0.75rem;
+			// 	background-color: rgba(#D0FFC9, 0.5);
+			// }
+			.box {
+				flex: 1;
+				padding: 0 0.75rem;
+				// display: inline-block;
+				// padding: 0 1rem;
+				list-style-type: none;
+				// border-left: 1px solid #f7b2c2;
+				// padding-left: 0.5rem;
+				.email {
+					color: #D0FFC9;
+					font-size: 0.8rem;
+				}
+				.address-email {
+					color: $white;
+					font-weight: bold;
+					font-size: 1rem;
+					direction: ltr;
+				}
+			}
+		}
+		.socials { 
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.social {
+			// display: inline-block;
+			padding: 0.3rem 1.1rem 0.3rem 1rem;
+			margin: 1.5rem 0;
+			border-radius: $base-radius;
+			background: #2E343B;
+			box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+			&:hover {
+				background: lighten(#2E343B, 5);
+			}
+			i {
+				margin-left: 0.3rem;
+			}
+			.name {
+				display: inline-block;
+				color: $white;
+				font-size: 0.8rem;
+			}
+		}
+		.download-app-footer {
+			a {
+				display: inline-block;
+				width: 48%;
+				&:first-of-type {
+					margin-left: 0.5rem;
+				}
+			}
+		}
+	}
+	.second-footer {
+		padding: 2.5rem 0;
+		border-bottom: 1px solid #2D2F33;
+		color: #b7b7b7;
+		p {
+			font-size: 0.85rem;
+		}
+		.contact-info {
+			font-size: 0.9rem;
+			margin-bottom: 1rem;
+			i {
+				position: relative;
+				float: right;
+				width: 1rem;
+				height: 1rem;
+				margin-top: 5px;
+				margin-left: 0.5rem;
+				border-radius: 100%;
+				color: $primary;
+			}
+			.information {
+				overflow: hidden;
+	    		display: block;
+				color: $gray;
+				font-size: 0.9rem;
+			}
+		}
+	}
+	.third-footer {
+		padding: 2.5rem 0;
+		// background-color: $white-gray;
+		a {
+			color: #b7b7b7;
+			&:hover {
+				color: $primary;
+			}
+		}
+		ul {
+			margin: 0;
+			li {
+				list-style-type: none;
+				font-size: 0.85rem;
+			}
+		}
+		.certificate-cn {
+			margin: 0 auto 2rem;
+			width: 24rem;
+			max-width: 100%;
+		}
+		.certificate {
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content: space-between;
+			.image-certificate {
+				display: block;
+				flex: 0 0 30%; /* explanation below */
+				background-color: #dadee4;
+				padding: 0.5rem;
+				margin-bottom: 1rem;
+				border-radius: $base-radius;
+				&:hover {
+					background-color: lighten(#a3b3ca, 5);
+				}
+				img {
+					display: block;
+					object-fit: cover;
+					// width: 3.5rem;
+					// height: 3.5rem;
+				}
+			}
+		}
+		.zebra {
+			text-align: center;
+			color: $midgray;
+			padding-bottom: 1rem;
+			h4 {
+				font-weight: 400;
+				font-size: 1rem;
+				letter-spacing: 0;
+				line-height: 20px;
+				padding: 0 1rem;
+				a {
+					color: $primary;
+					&:hover {
+						color: $secondary;
+					}
+				}
+			}
+			p {
+				font-weight: 400;
+				font-size: 0.9rem;
+				padding: 0 1rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+}
