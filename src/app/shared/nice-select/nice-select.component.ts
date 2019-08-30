@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import * as $ from 'jquery';
 
 /**
  * How to use?
@@ -39,7 +40,7 @@ export class NiceSelectComponent implements OnInit, AfterViewInit {
     setCurrentSelected(curSelected: string) {
         $(`#${this.niceSelectName}`).ready(() => {
             const isCurrentSelectedFromDropdownList = (dropdownList, cs) => {
-                return dropdownList.map(c => c.name).includes(cs);
+                return dropdownList.includes(cs);
             };
             if (isCurrentSelectedFromDropdownList(this.dropdownList, curSelected)) {
                 this.currentSelected = curSelected;
@@ -85,7 +86,7 @@ export class NiceSelectComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit(): void {
         if (this.dropdownList && this.dropdownList.length === 1) {
-            $(`#${this.niceSelectName} .current`).text(this.dropdownList[0].name);
+            $(`#${this.niceSelectName} .current`).text(this.dropdownList[0]);
         }
     }
 
