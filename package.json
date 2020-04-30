@@ -22,7 +22,7 @@
     "@types/jquery": "^3.3.31",
     "core-js": "^2.5.4",
     "dotenv": "^8.1.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jsdom": "^15.1.1",
     "moment-jalaali": "^0.8.3",
     "rxjs": "~6.3.3",
